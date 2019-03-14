@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe SongsController do
-  describe "file upload" do
-    before do
-      Song.destroy_all
-      Artist.destroy_all
-    end
+# RSpec.describe SongsController do
+#   describe "file upload" do
+#     before do
+#       Song.destroy_all
+#       Artist.destroy_all
+#     end
 
     # it "uploads and processes a file" do
     #   post :upload, file: fixture_file_upload('songs.csv', 'text/csv')
