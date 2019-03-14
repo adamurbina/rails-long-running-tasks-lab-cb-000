@@ -3,9 +3,10 @@ class SongsController < ApplicationController
 
   def upload
     CSV.foreach(params[:leads].path, headers: true) do |song|
-      Customer.create(email: lead[0], first_name: lead[1], last_name: lead[2])
+      new_artist = Artist.create_or_find_by(name: song[1])
+      Song.create(title: song[0], artist: new_artist)
     end
-    redirect_to customers_path
+    redirect_to songs_[path]
   end
 
   def index
