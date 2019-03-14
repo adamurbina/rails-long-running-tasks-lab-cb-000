@@ -6,7 +6,7 @@ class SongsController < ApplicationController
       new_artist = Artist.create(name: song[1])
       Song.create(title: song[0], artist: new_artist)
     end
-    redirect_to songs_[path]
+    redirect_to songs_path
   end
 
   def index
